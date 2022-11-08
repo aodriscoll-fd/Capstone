@@ -27,6 +27,7 @@ copy1col:{[tabledir;oldcol;newcol]
   stdout"copying ",(string oldcol)," to ",(string newcol)," in `",string tabledir;
   .os.cpy[(`)sv tabledir,oldcol;(`)sv tabledir,newcol];@[tabledir;`.d;,;newcol]]}
 
+/ function to delete column
 delete1col:{[tabledir;col]
  if[col in ac:allcols tabledir;
   stdout"deleting column ",(string col)," from `",string tabledir;
